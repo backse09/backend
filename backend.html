@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back End Development</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <span id="nav-up"></span>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="backend.html">Backend</a></li>
+                <li><a href="protocols.html">Protocols</a></li>
+                <li><a href="API.html">APIs</a></li>
+                <li><a href="authentication.html">Authentication</a></li>
+                <li><a href="databases.html">Databases</a></li>
+                <li><a href="cache.html">Cache</a></li>
+                <li><a href="Testing.html">Testing</a></li>
+                <li><a href="python.html">Python</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="backend-def">
+                <h1>What is Backend Development?</h1>
+                <p>Backend development entails creating and managing the server-side logic, databases, 
+                    and core functionalities of applications. 
+                    It includes the server, which handles data requests and responses.
+                    The application, which processes these requests.
+                    And the database, which organizes and secures data. 
+                    Backend development is crucial for determining how a website functions, 
+                    impacting its performance and user operations. 
+                    Common programming languages used are for Django for Python, Node.js JavaScript, and Spring for Java. 
+                    Backend developers ensure the application runs smoothly, 
+                    providing users with the desired experience and encouraging them to return.
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="backend-roadmap">
+                <h1>Back End roadmap:</h1>
+                <li><a href="#programming">Pick a programming language</a></li>
+                <li><a href="#vcs">Version control system</a></li>
+                <li><a href="#repo-hosting">Repo hosting</a></li>
+                <li><a href="protocols.html">Communication protocols</a></li>
+                <li><a href="#web-framework">API Web framework</a></li>
+                <li><a href="databases.html">Databases</a></li> 
+                <li><a href="authentication.html">Authentication</a></li>
+                <li>Proxies</li>
+                <li><a href="cache.html">Caching</a></li> 
+                <li>Web server</li>
+                <li><a href="Testing.html">Testing</a></li>
+
+                <h3>Advance skills:</h3>
+                <li>CI/CD</li>
+                <li>Design patterns</li>
+                <li>Containerization</li>
+                <li>Message Brokers</li>
+                <li>GraphQL</li>
+            </div>
+
+            <hr>
+
+
+            <div class="programming">
+                <h2 id="content-title">Programming language:</h2>
+                <p>A programming language is a formal set of instructions used to communicate with computers to perform specific tasks.
+                    It provides the syntax and rules for writing code, allowing developers to create software, applications, and systems.
+                    Programming languages enable programmers to write instructions that control how a computer operates, processes data, and interacts with users.
+                    Mainly backend programming languages are-
+                </p>
+
+                <div id="python">
+                    <h3>1.Python</h3>
+                    <p>Python is an easy to learn, powerful programming language. 
+                        It has efficient high-level data structures and a simple but effective approach to object-oriented programming. 
+                        Python's elegant syntax and dynamic typing, together with its interpreted nature, 
+                        make it an ideal language for scripting and rapid application development in many areas on most platforms.
+                        Python is a high-level, general-purpose, and very popular programming language. 
+                        Python programming language is being used in web development, 
+                        and Machine Learning applications, along with all cutting-edge technology in Software Industry. 
+                        Python language is being used by almost all tech-giant companies 
+                        like - Google, Amazon, Facebook, Instagram, Dropbox, Uber, … etc.
+                        <p>Learn <a href="python.html">more</a></p>
+                    </p>
+
+                    <div class="code">
+                        <span style="color: rgb(196, 188, 174);">hello.py</span>
+                        <div class="code-container">
+                            <button id="py-copy-btn" class="copy-btn" onclick="PyCopyCode()">Copy</button>
+                            <pre id="py-code-block">
+                                <code>
+    print ('Hello World!')
+                                </code>
+                            </pre>
+                        </div>
+                    
+                        <script>
+                            function PyCopyCode() 
+                            {
+                                const codeBlock = document.getElementById('py-code-block');
+                                const copyBtn = document.getElementById('py-copy-btn');
+                                
+                                const textarea = document.createElement('textarea');
+                                textarea.value = codeBlock.textContent;
+                                document.body.appendChild(textarea);
+                                textarea.select();
+                                document.execCommand('copy');
+                                document.body.removeChild(textarea);
+                    
+                                copyBtn.textContent = 'Copied';
+                                copyBtn.classList.add('copied');
+                    
+                                setTimeout(() => {
+                                    copyBtn.textContent = 'Copy';
+                                    copyBtn.classList.remove('copied');
+                                }, 5000);
+                            }
+                        </script>
+                    </div>
+                    <p>Python web site <a target="_blank" href="https://www.python.org/">https://www.python.org/</a></p>
+                </div>
+
+                <div id="go">
+                    <h3>2.GO</h3>
+                    <p>Golang is a procedural and statically typed programming language having the syntax similar to C programming language. 
+                        Go was created at Google in 2007, and since then, 
+                        engineering teams across Google have adopted Go to build products and services at massive scale. 
+                        Go is designed to enable developers to rapidly develop scalable and secure web applications. Go ships with an easy to use, 
+                        secure and performant web server and includes it own web templating library.
+                        Go is preferred for providing rapid cross-platform deployment. With its goroutines, native compilation, 
+                        and the URI-based package namespacing,
+                        Go code compiles to a single, small binary—with zero dependencies—making it very fast.
+                        With enhanced memory performance and support for several IDEs, Go powers fast and scalable web applications.
+                        Companies using the Go language (Golang) included Google, Paypal, Meta, Dropbox, Microsoft, Uber, Netflix, ... etc
+                        
+                        </p>
+                        <div class="code">
+                            <span style="color: rgb(196, 188, 174);">hello.go</span>
+                            <div class="code-container">
+                                <button id="go-copy-btn" class="copy-btn" onclick="GoCopyCode()">Copy</button>
+                                <pre id="go-code-block">
+                                    <code>
+    package main
+    import "fmt"
+
+    func main() {
+        fmt.Println("Hello World")
+    }
+                                    </code>
+                                </pre>
+                            </div>
+                        
+                            <script>
+                                function GoCopyCode() 
+                                {
+                                    const codeBlock = document.getElementById('go-code-block');
+                                    const copyBtn = document.getElementById('go-copy-btn');
+                                    
+                                    const textarea = document.createElement('textarea');
+                                    textarea.value = codeBlock.textContent;
+                                    document.body.appendChild(textarea);
+                                    textarea.select();
+                                    document.execCommand('copy');
+                                    document.body.removeChild(textarea);
+                        
+                                    copyBtn.textContent = 'Copied';
+                                    copyBtn.classList.add('copied');
+                        
+                                    setTimeout(() => {
+                                        copyBtn.textContent = 'Copy';
+                                        copyBtn.classList.remove('copied');
+                                    }, 5000);
+                                }
+                            </script>
+                        </div>
+                    <p>Golang web site <a target="_blank" href="https://go.dev/">https://go.dev/</a></p>
+                </div>
+
+                <div id="php">
+                    <h3>3.PHP</h3>
+                    <p>
+                        PHP is a server scripting language, and a powerful tool for making dynamic and interactive Web pages.
+                        PHP is an open-source general purpose scripting language, widely used for website development.
+                        PHP is the world's most popular server-side programming language.
+                        A large number of reusable classes and libraries are available on PEAR and Composer.
+                        PEAR (PHP Extension and Application Repository) is a distribution system for reusable PHP libraries or classes. 
+                        A popular general-purpose scripting language that is especially suited to web development.
+                        Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.
+                        PHP in their tech stacks, including Facebook, Slack, Lyft, Kevin, Accenture, Mobile, Whatsapp, and Delivery Hero.
+
+                    </p>
+                    <div class="code">
+                        <span style="color: rgb(196, 188, 174);">hello.php</span>
+                        <div class="code-container">
+                            <button id="php-copy-btn" class="copy-btn" onclick="PHPCopyCode()">Copy</button>
+                            <pre id="php-code-block">
+                                <code>
+
+    &lt;?php
+    echo "Hello World";
+                                                                    
+                                </code>
+                            </pre>
+                        </div>
+                    
+                        <script>
+                            function PHPCopyCode() 
+                            {
+                                const codeBlock = document.getElementById('php-code-block');
+                                const copyBtn = document.getElementById('php-copy-btn');
+                                
+                                const textarea = document.createElement('textarea');
+                                textarea.value = codeBlock.textContent;
+                                document.body.appendChild(textarea);
+                                textarea.select();
+                                document.execCommand('copy');
+                                document.body.removeChild(textarea);
+                    
+                                copyBtn.textContent = 'Copied';
+                                copyBtn.classList.add('copied');
+                    
+                                setTimeout(() => {
+                                    copyBtn.textContent = 'Copy';
+                                    copyBtn.classList.remove('copied');
+                                }, 5000);
+                            }
+                        </script>
+                    </div>
+                    <p>PHP web site <a target="_blank" href="https://www.php.net/">https://www.php.net/</a></p>
+                </div>
+
+                <div id="java">
+                    <h3>4.Java</h3>
+                    <p>
+                        Java is a popular programming language.
+                        Java is used to develop mobile apps, web apps, desktop apps, games and much more.
+                        Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.
+                        Java is the programming language and development platform. 
+                        It reduces costs, shortens development timeframes, drives innovation, and improves application services.
+                        There are some companies that use Java included Google, Amazon, Netflix, Twiter, Uber, Spotify, ... etc
+                    </p>
+                    <div class="code">
+                        <span style="color: rgb(196, 188, 174);">hello.java</span>
+                        <div class="code-container">
+                            <button id="java-copy-btn" class="copy-btn" onclick="javaCopyCode()">Copy</button>
+                            <pre id="java-code-block">
+                                <code>
+
+    public class Main
+    {
+        public static void main(String[] args) {
+            System.out.println("Hello World");
+        }
+    }
+                                                                    
+                                </code>
+                            </pre>
+                        </div>
+                    
+                        <script>
+                            function javaCopyCode() 
+                            {
+                                const codeBlock = document.getElementById('java-code-block');
+                                const copyBtn = document.getElementById('java-copy-btn');
+                                
+                                const textarea = document.createElement('textarea');
+                                textarea.value = codeBlock.textContent;
+                                document.body.appendChild(textarea);
+                                textarea.select();
+                                document.execCommand('copy');
+                                document.body.removeChild(textarea);
+                    
+                                copyBtn.textContent = 'Copied';
+                                copyBtn.classList.add('copied');
+                    
+                                setTimeout(() => {
+                                    copyBtn.textContent = 'Copy';
+                                    copyBtn.classList.remove('copied');
+                                }, 5000);
+                            }
+                        </script>
+                    </div>
+                    <p>Java web site <a target="_blank" href="https://www.java.com/en/">https://www.java.com/en/</a></p>
+                </div>
+
+                <div id="javascript">
+                    <h3>5.JavaScript</h3>
+                    <p>
+                        JavaScript is the world's most popular programming language.
+                        The JavaScript programming language is fun and flexible. 
+                        It's one of the core technologies of web development and can be used on both the front-end and the back-end.
+                        Major Companies Are Using JavaScript, they are Microsoft, Paypal, Netflix, Uber, Facebook, eBay, Walmart, LinkedIn, Google, ... etc 
+                    </p>
+                    <div class="code">
+                        <span style="color: rgb(196, 188, 174);">hello.js</span>
+                        <div class="code-container">
+                            <button id="javascript" class="copy-btn" onclick="javascriptCopyCode()">Copy</button>
+                            <pre id="javascript-code-block">
+                                <code>
+
+    console.log("Hello");
+                                                                    
+                                </code>
+                            </pre>
+                        </div>
+                    
+                        <script>
+                            function javascriptCopyCode() 
+                            {
+                                const codeBlock = document.getElementById('javascript-code-block');
+                                const copyBtn = document.getElementById('javascript');
+                                
+                                const textarea = document.createElement('textarea');
+                                textarea.value = codeBlock.textContent;
+                                document.body.appendChild(textarea);
+                                textarea.select();
+                                document.execCommand('copy');
+                                document.body.removeChild(textarea);
+                    
+                                copyBtn.textContent = 'Copied';
+                                copyBtn.classList.add('copied');
+                    
+                                setTimeout(() => {
+                                    copyBtn.textContent = 'Copy';
+                                    copyBtn.classList.remove('copied');
+                                }, 5000);
+                            }
+                        </script>
+                    </div>
+                    <p>JavaScript web site <a target="_blank" href="https://www.javascript.com/">https://www.javascript.com/</a></p>
+                </div>
+
+                <div id="rust">
+                    <h3>6.Rust</h3>
+                    <p>
+                        Rust is a general-purpose programming language emphasizing performance, type safety, and concurrency.
+                        It enforces memory safety, meaning that all references point to valid memory, without a garbage collector.
+                        Fast and memory-efficient, suitable for critical services, embedded devices, and easily integrate with other languages.
+                        Rust was influenced by ideas from functional programming, including immutability, higher-order functions, and algebraic data types.
+                        Rust programming language used companies like Facebook, Amazon, Discord, Google, Figma, ... etc 
+                    </p>
+                    <div class="code">
+                        <span style="color: rgb(196, 188, 174);">hello.rs</span>
+                        <div class="code-container">
+                            <button id="rust-copy-btn" class="copy-btn" onclick="rustCopyCode()">Copy</button>
+                            <pre id="rust-code-block">
+                                <code>
+
+    fn main() {
+        println!("Hello World");
+    }
+                                                                    
+                                </code>
+                            </pre>
+                        </div>
+                    
+                        <script>
+                            function rustCopyCode() 
+                            {
+                                const codeBlock = document.getElementById('rust-code-block');
+                                const copyBtn = document.getElementById('rust-copy-btn');
+                                
+                                const textarea = document.createElement('textarea');
+                                textarea.value = codeBlock.textContent;
+                                document.body.appendChild(textarea);
+                                textarea.select();
+                                document.execCommand('copy');
+                                document.body.removeChild(textarea);
+                    
+                                copyBtn.textContent = 'Copied';
+                                copyBtn.classList.add('copied');
+                    
+                                setTimeout(() => {
+                                    copyBtn.textContent = 'Copy';
+                                    copyBtn.classList.remove('copied');
+                                }, 5000);
+                            }
+                        </script>
+                    </div>
+                    <p>Rust web site <a target="_blank" href="https://www.rust-lang.org/">https://www.rust-lang.org/</a></p>
+                </div>
+
+                <div id="ruby">
+                    <h3>7.Ruby</h3>
+                    <p>
+                        Ruby is an interpreted, high-level, general-purpose programming language.
+                        A dynamic, open source programming language with a focus on simplicity and productivity. 
+                        It has an elegant syntax that is natural to read and easy to write.
+                        Ruby is a language of careful balance, In Ruby, everything is an object. 
+                        Every bit of information and code can be given their own properties and actions.
+                        Ruby's pure object-oriented approach is most commonly demonstrated by a bit of code which applies an action to a number.
+                        included Twiter, Square, Shopify, Github, YellowPages, Scribd, SoundCloud, BaseCamp, Fiverr, GoodReads, ... etc
+                    </p>
+                    <div class="code">
+                        <span style="color: rgb(196, 188, 174);">hello.rb</span>
+                        <div class="code-container">
+                            <button id="ruby-copy-btn" class="copy-btn" onclick="rubyCopyCode()">Copy</button>
+                            <pre id="ruby-code-block">
+                                <code>
+
+    puts "Hello World"
+                                                                    
+                                </code>
+                            </pre>
+                        </div>
+                    
+                        <script>
+                            function rubyCopyCode() 
+                            {
+                                const codeBlock = document.getElementById('ruby-code-block');
+                                const copyBtn = document.getElementById('ruby-copy-btn');
+                                
+                                const textarea = document.createElement('textarea');
+                                textarea.value = codeBlock.textContent;
+                                document.body.appendChild(textarea);
+                                textarea.select();
+                                document.execCommand('copy');
+                                document.body.removeChild(textarea);
+                    
+                                copyBtn.textContent = 'Copied';
+                                copyBtn.classList.add('copied');
+                    
+                                setTimeout(() => {
+                                    copyBtn.textContent = 'Copy';
+                                    copyBtn.classList.remove('copied');
+                                }, 5000);
+                            }
+                        </script>
+                    </div>
+                    <p>Ruby web site <a target="_blank" href="https://www.ruby-lang.org/en/">https://www.ruby-lang.org/en/</a></p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="vcs" id="vcs">
+                <h2 id="content-title">Version control system</h2>
+                <p>
+                    Version control systems are a category of software tools 
+                    that helps in recording changes made to files by keeping a track of modifications done in the code.
+                    Version control system keeps track on changes made on a particular software and take a snapshot of every modification.
+                    Enhances the project development speed by providing efficient collaboration,
+                    Leverages the productivity, expedites product delivery, and skills of the employees through better communication and assistance,
+                    Reduce possibilities of errors and conflicts meanwhile project development through traceability to every small change,
+                    Employees or contributors of the project can contribute from anywhere irrespective of the different geographical locations through this VCS,
+                    For each different contributor to the project, a different working copy is maintained and not merged to the main file unless the working copy is validated.
+                    There are most common VCS, they are Git, Helix core, Microsoft TFS.
+                    
+                    <p><b>Types of Version Control Systems: </b></p>
+                    <ol>
+                        <li>Local Version Control Systems</li>
+                        <li>Centralized Version Control Systems</li>
+                        <li>Distributed Version Control Systems</li> 
+                    </ol>
+                </p>
+                <div class="git">
+                    <h3>Git</h3>
+                    <p>
+                        Git is an open-source distributed version control system.
+                        It is designed to handle minor to major projects with high speed and efficiency.
+                        It is developed to co-ordinate the work among the developers.
+                        The version control allows us to track and work together with our team members at the same workspace.
+                        Git is a distributed version control system that tracks versions of files.
+                        It is often used to control source code by programmers collaboratively developing software.
+                        Git is a modern and widely used distributed version control system in the world.
+                        It is developed to manage projects with high speed and efficiency.
+                        The version control system allows us to monitor and work together with our team members at the same workspace.
+                        
+                        <p>Git website <a target="_blank" href="https://git-scm.com/">https://git-scm.com/</a></p>
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="repo-hosting" id="repo-hosting">
+                <h2 id="content-title">Repository hosting</h2>
+                <p>
+                    Repo hosting services offer several benefits to developers and development teams.
+                    Firstly, they provide a secure and reliable environment for storing code.
+                    This ensures that the codebase remains safe and accessible even if individual machines or devices fail.
+                    Additionally, repo hosting services enable effective collaboration among team members, regardless of their geographical location. 
+                    Developers can work on the same code simultaneously, making it easier to review and merge changes. Moreover,
+                    these services often offer integration with other development tools, enhancing the overall workflow and productivity.
+                    Repository Hosting is an online SAAS for software project management tools and open source hosting solutions.
+                    
+                    Let's have a look around the web and see what's available, there are Github, Gitlab, Gitbucket, SourceForge, Azure DevOps, AWS CodeCommit, ... etc 
+                </p>
+                <div class="github">
+                    <h3>GitHub</h3>
+                    <p>GitHub is a developer platform that allows developers to create, store, manage and share their code.
+                        It uses Git software, providing the distributed version control of Git plus access control,bug tracking, 
+                        software feature requests, task management, continuous integration, and wikis for every project.</p>
+                    <p>Github website<a target="_blank" href="https://github.com/">https://github.com/</a></p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="web-framework" id="web-framework">
+                <h2 id="content-title">API web framework</h2>
+                <p>An API web framework is a specialized software framework designed to facilitate the creation,
+                    management, and consumption of APIs (Application Programming Interfaces).
+                    These frameworks simplify the process of building APIs by providing tools and conventions to handle common tasks such as routing,
+                    request handling, serialization, and documentation. Firstly decide wich language you want to work.
+                    
+                    <p><b>For example-</b></p> 
+                    <ol>
+                        <li><a target="_blank" href="https://www.django-rest-framework.org/">Django rest framework</a>: An extension of Django in python programming language, this framework adds powerful and flexible tools for building Web APIs. 
+                            It is known for its robust authentication system and easy-to-use serializers.
+                        </li>
+                        <p> </p>
+                        <li><a target="_blank" href="https://flask.palletsprojects.com/en/">Flask</a>: In Python, A micro-framework for Python that is lightweight and modular.
+                            Flask is often used for small to medium-sized applications and is well-suited for building APIs.
+                        </li>
+                        <p></p>
+                        <li><a target="_blank" href="https://spring.io/projects/spring-boot/">Spring Boot</a>: In Java, a project within the larger Spring framework ecosystem, Spring Boot simplifies the development of production-ready applications with minimal configuration.
+                            It includes features for building RESTful APIs with ease.
+                        </li>
+                        <p></p>
+                        <li><a target="_blank" href="https://expressjs.com/">Express</a>: In javascript, a minimalist and flexible Node.js web application framework that provides a robust set of features to build web and mobile applications.
+                            It's particularly popular for creating APIs due to its simplicity and extensive middleware support.
+                        </li>
+                        <p></p>
+                        <li><a target="_blank" href="https://rubyonrails.org/">Rails</a>: Ruby on Rails is a full-featured web framework,
+                             and it can be used to build APIs by configuring it to run in API-only mode.
+                        </li>
+                        <p></p>
+                        <li><a target="_blank" href="https://pkg.go.dev/github.com/gin-gonic/gin">Gin</a>: In Go programming language, Gin is a fast web framework for Go that provides a martini-like API with much better performance. 
+                            It's popular for building high-performance APIs.
+                        </li>
+                        <p></p>
+                        <li><a target="_blank" href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.NET Core</a>: In C#, A cross-platform, high-performance framework for building modern, cloud-based, 
+                            and internet-connected applications. It includes support for building APIs.
+                        </li>
+                    </ol> 
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
