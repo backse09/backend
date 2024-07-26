@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back End development</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar-toggle">
+            <button id="sidebar-toggle-btn">></button>
+            <nav class="sidebar">
+                <ul>
+                    <span id="nav-up"></span>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="backend.html">Backend</a></li>
+                    <li><a href="protocols.html">Protocols</a></li>
+                    <li><a href="API.html">APIs</a></li>
+                    <li><a href="authentication.html">Authentication</a></li>
+                    <li><a href="databases.html">Databases</a></li>
+                    <li><a href="cache.html">Cache</a></li>
+                    <li><a href="Testing.html">Testing</a></li>
+                    <li><a href="python.html">Python</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+        <div class="content">
+
+
+            
+            <h1>Protocols</h1>
+            <p>
+                A network protocol is a set of rules that govern data communication between different devices in the network.
+                It determines what is being communicated, how it is being communicated, and when it is being communicated.
+                It permits connected devices to communicate with each other, irrespective of internal and structural differences.
+            </p>
+
+            <p>
+                An approved set of rules that control data transmission across various networked devices is known as a network protocol.
+                These set of rules specify the data's transmission, reception,
+                and processing steps and make sure that devices can comprehend and analyze the data they share.
+                It makes it possible for connected devices to interact with one another despite internal and structural differences.
+            </p>
+
+            <p><b>Types of protocols</b></p>
+            <ol>
+                <li><a href="#communication-protocols">Communication Protocols</a></li>
+                <li><a href="#routing-protocols">Routing protocols</a></li>
+                <li><a href="#security-protocols">Security Protocols</a></li>
+                <li><a href="#management-protocols">Management Protocols</a></li>
+            </ol>
+
+            <hr>
+
+            <div class="communication-protocols">
+                <h1 id="communication-protocols">1. Communication protocols</h1>
+                <p>
+                    These protocols formally set out the rules and formats through which data is transferred.
+                    The foundation of data transmission and information flow in computer networks is communication protocols.
+                    To ensure seamless and dependable communication, they specify the policies and norms defining how data is formatted, sent, and received between devices.
+                    These protocols formally lay out the guidelines and file types used for data transmission.
+                    Syntax, semantics, error detection, synchronization, and authentication are all handled by these protocols.
+                </p>
+                <p>Below mentioned are some network communication protocol:</p>
+                <li>
+                    <b>TCP/IP:</b> Stand for Transmission Control Protocol/Internet Protocol.
+                    TCP layouts a reliable stream delivery by using sequenced acknowledgment. 
+                    It is a connection-oriented protocol i.e., 
+                    it establishes a connection between applications before sending any data. 
+                    It is used for communicating over a network.
+                    IP (Internet Protocol) for addressing and routing packets. 
+                    Data is divided into packets, transported via networks, and precisely reassembled at the destination, thanks to TCP/IP.
+                    It is a protocol through which data is sent from one host to another over the internet. 
+                    It is used for addressing and routing data packets so that they can reach their destination.
+
+                </li>
+                <p></p>
+                <li><b>HTTP:</b>
+                    Stand for Hypertext Transfer Protocol, The World Wide Web uses the HTTP protocol to communicate web pages 
+                    and resources they are connected with.
+                    Web browser as a client submit HTTP request to web server, the web server after processing query or handle this request return response.
+                    This process is known as a request response protocol.
+                </li>
+
+                <p></p>
+                <li>
+                    <b>HTTPS:</b> It is Hypertext Transfer Protocol Secure, HTTPS is an HTTP extension that adds Security
+                    using SSL/TLS encryption.
+                    It makes sure that sensitive data, including login passwords, personal information, 
+                    and financial transactions, 
+                    is encrypted before it is transferred between a web browser and a web server.
+                    It is the secured version of HTTP. this protocol ensures secure communication between two computers 
+                    where one sends the request through the browser and the other fetches the data from the web server.
+                </li>
+
+                <p></p>
+                <li>
+                    <b>FTP</b>: File Transfer Protocol is a method for quickly moving file between computers connected to a network.
+                    The transfer of files to or from a host computer is facilitated by the client-server protocol FTP. Using FTP, 
+                    users can download documents, software, web pages, and other resources from other services.
+                    FTP is a Client/server protocol that is used for moving files to or from a host computer, it allows users to download files, 
+                    programs, web pages, and other things that are available on other services.
+                </li>
+
+                <p></p>
+                <li>
+                    <b>SMTP:</b> Simple Mail Transfer Protocol, between email clients and servers, email message sent and relayed via the SMTP protocol.
+                    When you send an email, your email client connects through SMTP to the server of your email provider,
+                    which then routes the message to its intended recipient.
+                </li>
+
+                <p></p>
+                <li>
+                    <b>POP3:</b> Post Office Protocol version 3 are used by email client to retrieve messages from a mail server.
+                    Internet Message Access Protocol (IMAP) maintains messages on the server while syncing messages across various devices,
+                    which normally downloads message to a local device.
+                    POP3 is a protocol that local mail clients use to connect to a remote email server and download emails. 
+                    ISPs frequently use POP3 to store and retrieve emails for their customers. Once the email client has obtained these emails, 
+                    they are finally downloaded and typically deleted from the server.
+                </li>
+            </div>
+
+            <div class="routing-protocols">
+                <h1 id="routing-protocols">2. Routing Protocols</h1>
+                <p>
+                    For routers and other network devices to choose the best routes for data packets as they travel through a network, 
+                    routing protocols are essential algorithms and rules. 
+                    They are essential to guaranteeing effective data routing and delivery. The following are two well-known routing protocols:
+                    Based on the number of network hops (the number of routers a packet must pass through), RIP determines the optimum path for data packets. 
+                    It keeps track of these hop counts to destination networks in routing tables.
+
+                    <li><b>Routing Information Protocol (RIP):</b> RIP is frequently used in tiny to medium-sized networks when configuration simplicity and convenience are top priorities.
+                    </li>
+
+                    <p></p>
+                    <li><b>Open Shortes Path First (OSPF):</b> OSPF is frequently used in larger, more intricate networks, such as businesses and Internet service providers (ISPs).
+                        OSPF creates and keeps an up-to-date map of the entire network, complete with linkages and router status. 
+                        Based on this extensive topology data, it determines the shortest path to a destination.
+                    </li>
+                </p>
+            </div>
+
+            <div class="security-protocols">
+                <h1 id="security-protocols">3. Security Protocols</h1>
+                Network communication must include security procedures that protect data confidentiality, integrity, and authenticity.
+                <li>
+                    <b>SSL:</b>
+                    Secure Socket Layer is a network security protocol mainly used for protecting sensitive data and securing internet connections. 
+                    SSL allows both server-to-server and client-to-server communication. 
+                    All the data transferred through SSL is encrypted thus stopping any unauthorized person from accessing it.
+                </li>
+
+                <p></p>
+                <li>
+                    <b>TLS:</b>
+                    Transport Layer Security is a security protocol designed for data security and privacy over the internet, its functionality is encryption,
+                    checking the integrity of data i.e., whether it has been tampered with or not, and authentication. 
+                    It is generally used for encrypted communication between servers and web apps, 
+                    like a web browser loading a website, it can also be used for encryption of messages, emails, and VoIP.
+                </li>
+
+                <p></p>
+                <li>
+                    <b>HTTPS:</b> It is Hypertext Transfer Protocol Secure, HTTPS is an HTTP extension that adds Security
+                    using SSL/TLS encryption.
+                    It makes sure that sensitive data, including login passwords, personal information, 
+                    and financial transactions, 
+                    is encrypted before it is transferred between a web browser and a web server.
+                    It is the secured version of HTTP. this protocol ensures secure communication between two computers 
+                    where one sends the request through the browser and the other fetches the data from the web server.
+                </li>
+
+            </div>
+
+            <div class="management-protocols">
+                <h1 id="management-protocols">4. Management Protocols</h1>
+                <p>
+                    These protocols outline the procedures and policies that keep the computer network monitored, maintained, and managed.
+                    These protocols also assist in distributing these requirements across the network to guarantee reliable communication.
+                    To diagnose connections between a host and a client, network management protocols can also be employed.
+                </p>
+                <li>
+                    <b>ICMP:</b> Internet Control Management Protocol operate at layer 3 of the network layer,
+                    to report error, conduct diagnostics, and transmit operational data.
+                    It manages activities, including network troubleshooting, error warnings, and congestion reporting.
+                </li>
+                <p></p>
+                <li>
+                    <b>SNMP:</b> Simple Netwok Management protocol are managed through the application layer means is layer 7.
+                    The controlled device, SNMP manager, and agent are its three main components.
+                </li>
+
+                <p></p>
+                <li>
+                    <b>FTP</b>: File Transfer Protocol is a method for quickly moving file between computers connected to a network.
+                    The transfer of files to or from a host computer is facilitated by the client-server protocol FTP. Using FTP, 
+                    users can download documents, software, web pages, and other resources from other services.
+                    FTP is a Client/server protocol that is used for moving files to or from a host computer, it allows users to download files, 
+                    programs, web pages, and other things that are available on other services.
+                </li>
+                
+                <p></p>
+                <li>
+                    <b>POP3:</b> Post Office Protocol version 3 are used by email client to retrieve messages from a mail server.
+                    Internet Message Access Protocol (IMAP) maintains messages on the server while syncing messages across various devices,
+                    which normally downloads message to a local device.
+                    POP3 is a protocol that local mail clients use to connect to a remote email server and download emails. 
+                    ISPs frequently use POP3 to store and retrieve emails for their customers. Once the email client has obtained these emails, 
+                    they are finally downloaded and typically deleted from the server.
+                </li>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
