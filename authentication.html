@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Back End development</title>
+    <script src="sidebar.js"></script>
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
@@ -26,7 +27,45 @@
             </nav>
         </div>
         <div class="content">
+            <h1>What is Authentication?</h1>
+            <p>Authentication is the process of verifying the identity of a user or system. It ensures that the entity requesting access is indeed who or what it claims to be.</p>
             
+            <h2>Types of Authentication</h2>
+            <ol>
+                <li><strong>Password-Based Authentication:</strong>
+                    <p>Users provide a password that matches the one stored in the system. Examples include logging into a website or an email account.</p>
+                </li>
+                <li><strong>Multi-Factor Authentication (MFA):</strong>
+                    <p>This method requires two or more verification factors. Examples include a password followed by a verification code sent to a mobile device.</p>
+                </li>
+                <li><strong>Biometric Authentication:</strong>
+                    <p>Uses unique biological characteristics. Examples include fingerprint scans, facial recognition, and iris scans.</p>
+                </li>
+                <li><strong>Token-Based Authentication:</strong>
+                    <p>Involves the use of a token, which can be a physical device or a software token. Examples include RSA SecurID tokens and JWT (JSON Web Tokens).</p>
+                </li>
+                <li><strong>Certificate-Based Authentication:</strong>
+                    <p>Uses digital certificates to authenticate a user or device. Examples include SSL/TLS certificates used in HTTPS connections.</p>
+                </li>
+                <li><strong>Single Sign-On (SSO):</strong>
+                    <p>Allows a user to authenticate once and gain access to multiple systems. Examples include logging into Google and accessing Gmail, Drive, and other services without logging in again.</p>
+                </li>
+            </ol>
+            
+            <h2>Examples of Authentication in Use</h2>
+            <ul>
+                <li>Entering a username and password to log into an email account (Password-Based Authentication).</li>
+                <br>
+                <li>Receiving a text message with a code after entering a password to access a bank account (Multi-Factor Authentication).</li>
+                <br>
+                <li>Unlocking a smartphone using a fingerprint (Biometric Authentication).</li>
+                <br>
+                <li>Using an RSA SecurID token to access a corporate network (Token-Based Authentication).</li>
+                <br>
+                <li>Securing a website with HTTPS using an SSL certificate (Certificate-Based Authentication).</li>
+                <br>
+                <li>Accessing multiple online services with one set of login credentials via Google or Facebook login (Single Sign-On).</li>
+            </ul>
         </div>
     </div>
 </body>
